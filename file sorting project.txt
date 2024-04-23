@@ -1,0 +1,15 @@
+import os,shutil
+path = r"C:/Users/CSP/Downloads/sorted file/"
+file_main = os.listdir(path)
+file_name = ['csv file','txt file','jpeg file']
+for loop in range(0,3):
+    if not os.path.exists(path + file_name[loop]):
+        print(path + file_name[loop])
+        os.makedirs(path + file_name[loop])
+for file in file_main:
+    if ".csv" in file_main and not os.path.exists(path + "csv file/" + file):
+        shutil.move(path + file, path + "csv file/" + file)
+    if ".txt" in file_main and not os.path.exists(path + "txt file/" + file):
+        shutil.move(path + file, path + "txt file/" + file)
+    if ".jpeg" in file_main and not os.path.exists(path + "jpeg file/" + file):
+        shutil.move(path + file, path + "jpeg file/" + file)
