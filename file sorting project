@@ -13,3 +13,4 @@ for file in file_main:
         shutil.move(path + file, path + "txt file/" + file)
     if ".jpeg" in file_main and not os.path.exists(path + "jpeg file/" + file):
         shutil.move(path + file, path + "jpeg file/" + file)
+
